@@ -1,56 +1,56 @@
-$container-xxl:             1364px;
-$container-xxxl:            1640px;
-$body_bg_color:             #A374D1;
-$logo_main_color:           #FF92FF;
-$btn_bg_color:              #FF92FF;
-$btn_bg_color_hover:        #FC88FC;
-$btn_bg_color_active:       #FF6EFF;
-$btn_bg_before_color:       #E581E5;
-$btn_bg_before_color_hover: #DB76DB;
-$btn_bg_before_color_active:#DC5FDC;
-$bg_dark_1:                 $btn_bg_color;
-$bg_light_1:                #E6CCFF;
-$bg_dark_2:                 #56433A;
-$bg_light_2:                #EAB9A8;
-$font_color:                #E5CBFF;
-$font_color2:               #845CAB;
-$font_color3:               #fff;
-$font_family:               "Biotif", sans-serif;
-$font_weight:               400;
-$font_size:                 19px;
-$font_size_mobile:          15px;
-$body_mb:                   120px;
-$body_mb_mob:               50px;
-$font_family2:              $font_family;
-$link_txt_family:           $font_family;
-$link_color:                #fff;
-$link_hover_color:          #FC88FC;
-$link_active_color:         #FF6EFF;
-$link_hover_color1:         $btn_bg_before_color_hover;
-$link_hover_color2:         $btn_bg_before_color_hover;
-$footer_height:             121px;
-$footer_height_mob:         242px;
-$footer_text_color:         #E6CCFF;
-$footer_text_color_hover:   #FC88FC;
-$footer_text_color_active:  #FF6EFF;
+/**/$container-xxl:             1364px;
+/**/$container-xxxl:            1640px;
+/**/$body_bg_color:             #A374D1;
+/**/$logo_main_color:           #FF92FF;
+/**/$btn_bg_color:              #FF92FF;
+/**/$btn_bg_color_hover:        #FC88FC;
+/**/$btn_bg_color_active:       #FF6EFF;
+/**/$btn_bg_before_color:       #E581E5;
+/**/$btn_bg_before_color_hover: #DB76DB;
+/**/$btn_bg_before_color_active:#DC5FDC;
+/**/$bg_dark_1:                 $btn_bg_color;
+/**/$bg_light_1:                #E6CCFF;
+/**/$bg_dark_2:                 #56433A;
+/**/$bg_light_2:                #EAB9A8;
+/**/$font_color:                #E5CBFF;
+/**/$font_color2:               #845CAB;
+/**/$font_color3:               #fff;
+$font_family:               "CeraRoundPro", sans-serif;
+/**/$font_weight:               400;
+/**/$font_size:                 19px;
+/**/$font_size_mobile:          15px;
+/**/$body_mb:                   120px;
+/**/$body_mb_mob:               50px;
+/**/$font_family2:              $font_family;
+/**/$link_txt_family:           $font_family;
+/**/$link_color:                #fff;
+/**/$link_hover_color:          #FC88FC;
+/**/$link_active_color:         #FF6EFF;
+/**/$link_hover_color1:         $btn_bg_before_color_hover;
+/**/$link_hover_color2:         $btn_bg_before_color_hover;
+/**/$footer_height:             121px;
+/**/$footer_height_mob:         242px;
+/**/$footer_text_color:         #E6CCFF;
+/**/$footer_text_color_hover:   #FC88FC;
+/**/$footer_text_color_active:  #FF6EFF;
 
 //Form
-$input_bg:                  #ECD9FF;
-$input_hover_bg:            #E5CBFF;
-$input_txt_family:          $font_family;
-$input_txt_color:           $font_color2;
-$input_hover_txt_color:     $font_color2;
-$input_placeholder_color:   $body_bg_color;
-$input_txt_xs_size:         15px;
-$input_txt_xs_lh:           1.5;
-$input_txt_size:            20px;
-$input_txt_lh:              1.5;
-$input_border_color:        $font_color3;
-$input_border:              none;
-$input_hover_border:        $input_border;
-$input_border_radius:       100px;
-$textarea_border_radius:    35px;
-$textarea_border_radius_mob:10px;
+/**/$input_bg:                  #ECD9FF;
+/**/$input_hover_bg:            #E5CBFF;
+/**/$input_txt_family:          $font_family;
+/**/$input_txt_color:           $font_color2;
+/**/$input_hover_txt_color:     $font_color2;
+/**/$input_placeholder_color:   $body_bg_color;
+/**/$input_txt_xs_size:         15px;
+/**/$input_txt_xs_lh:           1.5;
+/**/$input_txt_size:            20px;
+/**/$input_txt_lh:              1.5;
+/**/$input_border_color:        $font_color3;
+/**/$input_border:              none;
+/**/$input_hover_border:        $input_border;
+/**/$input_border_radius:       100px;
+/**/$textarea_border_radius:    35px;
+/**/$textarea_border_radius_mob:10px;
 
 //Custom Checkbox
 $checkbox_xs_width:             38px;
@@ -180,6 +180,7 @@ $user_list_wider:           160px;
 $user_list_item_breakpoint: 992px;
 $user_list_title_color:     $font_color2;
 
+/**/
 @mixin wave($width, $height, $background-image, $background-position) {
   width: $width;
   height: $height;
@@ -190,6 +191,7 @@ $user_list_title_color:     $font_color2;
   position: absolute;
 }
 
+/**/
 @mixin circle($diameter, $background-color) {
   width: $diameter;
   height: $diameter;
