@@ -1,0 +1,92 @@
+.settings-form {
+  padding-top: 49px;
+  @media (min-width: 992px) {
+    padding-top: 70px;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 10px;
+  }
+  @media (min-width: 1500px) {}
+  @media (min-width: 1920px) {}
+}
+
+.settings-photo {
+  margin: 0 -15px;
+  position: relative;
+  overflow: hidden;
+  @media (min-width: 400px) {
+    width: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  @media (min-width: 768px) {
+    width: 470px;
+    max-width: 470px;
+  }
+  @media (min-width: 1200px) {
+    background-image: none;
+    width: 483px;
+    max-width: 483px;
+  }
+  @media (min-width: 1500px) {
+    width: 483px;
+    max-width: 483px;
+    margin: 0 55px 0 0;
+  }
+  @media (min-width: 1920px) {}
+}
+
+.profile-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 472px;
+  max-height: 472px;
+  background-color: $bg_light_1;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  position: relative;
+  &::after {
+    content: '';
+    @include wave(calc(100% + 2px), 30px, '../img/bg/bg-ava-bottom1.svg', 50%);
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    @media (min-width: 1200px) {
+      content: none;
+      display: none;
+    }
+  }
+  @media (min-width: 400px) {
+    height: 506px;
+    max-height: 506px;
+  }
+  @media (min-width: 768px) {
+    height: 693px;
+    max-height: 693px;
+  }
+  @media (min-width: 1200px) {
+    height: 483px;
+    max-height: 483px;
+    border-radius: 100%;
+    background-size: 100%;
+    background-position: 50% 0;
+  }
+  @media (min-width: 1500px) {
+    height: 483px;
+    max-height: 483px;
+  }
+}
+
+.settings__btn {
+  @media (min-width: 1500px) {
+    max-width: 355px;
+  }
+}
+
+.form-group-check-wrap__item {}

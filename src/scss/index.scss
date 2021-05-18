@@ -1,0 +1,125 @@
+.display {
+  @media (min-width: 1200px) {
+    margin: 0;
+  }
+  .firstscreen {
+    padding: 10px 0 0 0;
+    background-color: $body_bg_color;
+    margin-top: -1px;
+  }
+  .secondscreen {
+    color: $font_color2;
+  }
+  p {
+    line-height: 34px;
+    @media (min-width: 768px) {
+      line-height: 40px;
+      font-size: 18px;
+    }
+  }
+}
+.display_01 {
+  .index-btn-area {
+    @media (min-width: 1200px) {
+      width: 676px;
+    }
+  }
+}
+.display_02 {
+  .index-btn-area {
+    @media (min-width: 1200px) {
+      width: 626px;
+      margin: 64px auto 0;
+    }
+  }
+}
+.display_03 {
+  margin: 10px 0 0 0;
+}
+
+.btn_display-01 {
+  @media (min-width: 1200px) {
+    margin-left: auto;
+  }
+}
+
+.index-btn-area {
+  margin: 0 auto 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @media (min-width: 1200px) {
+    margin: 0 auto;
+    z-index: 2;
+  }
+}
+
+@keyframes bits {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.btn-index {
+  animation: 2s bits infinite linear;
+}
+
+.circle {
+  @media (min-width: 1200px) {
+    &.circle1 {
+      @include circle(20px, $btn_bg_color);
+    }
+    &.circle2 {
+      @include circle(60px, $btn_bg_color);
+    }
+  }
+}
+
+
+.collage {
+  width: 100%;
+  margin: 0 0 33px;
+  position: relative;
+  @media (min-width: 576px) {;
+    margin: 0 0 60px;
+  }
+  @media (min-width: 1200px) {
+    margin: -69px 0 119px;
+    position: relative;
+  }
+}
+
+.collage__img {
+  width: 100%;
+  height: auto;
+  @media (min-width: 1200px) {
+    position: relative;
+    bottom: -1px;
+  }
+}
+
+.notice-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.notice-row__icon {
+  display: block;
+}
+.notice-row__txt {
+  @media (min-width: 1200px) {
+    font-family: $font_family;
+    color: $font_color3;
+    font-weight: 300;
+    font-size: 33px;
+    line-height: 1;
+    margin-left: 20px;
+    position: relative;
+    top: -4px;
+  }
+}
