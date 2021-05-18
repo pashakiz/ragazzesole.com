@@ -21,12 +21,8 @@ body {
 }
 
 .container {
-  &.container_index {
-    @media (min-width: 1200px) {
-      padding: 0 11px;
-    }
-  }
-  &.container_userlist {
+  &.container_index {}
+  &.container_xxl {
     @media (min-width: 1500px) {
       max-width: $container-xxl + $grid-gutter-width;
     }
@@ -34,7 +30,7 @@ body {
       max-width: $container-xxl + $grid-gutter-width;
     }
   }
-  &.container_index-text {
+  &.container_xxxl {
     @media (min-width: 1500px) {
       max-width: $container-xxl + $grid-gutter-width;
     }
@@ -45,9 +41,7 @@ body {
   &.container_settings {
     @media (min-width: 1200px) {
       padding-top: 91px;
-    }
-    @media (min-width: 1500px) {
-      max-width: 1292px + $grid-gutter-width;
+      max-width: 1022px + $grid-gutter-width;
     }
   }
   &.container_profile {
@@ -62,25 +56,15 @@ body {
   }
   &.container_narrow {
     @media (min-width: 1200px) {
-      max-width: 966px + $grid-gutter-width;
+      max-width: 896px + $grid-gutter-width;
     }
-  }
-  &.container_swithers {
-  @media (min-width: 768px) {
-    max-width: 572px + $grid-gutter-width;
-  }
   }
   &.container_text {
     @media (min-width: 1200px) {
       padding-top: 29px;
-      max-width: 828px + $grid-gutter-width;
     }
   }
-  &.container_footer {
-    @media (min-width: 1534px) {
-      max-width: 1504px + $grid-gutter-width;
-    }
-  }
+  &.container_footer {}
 }
 
 .preloader {
