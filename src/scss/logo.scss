@@ -24,7 +24,11 @@
     font-family: $font_family;
     font-weight: 500;
     color: $font_color2;
-    font-size: 25px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    @media (min-width: 992px) {
+      font-size: 25px;
+    }
   }
 }
 

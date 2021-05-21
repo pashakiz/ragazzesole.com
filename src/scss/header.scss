@@ -22,7 +22,10 @@
   }
   &.expand {
     .header__nav-toggle {
-      .menu {}
+      .menu {
+        width: 30px;
+        background-image: url('../img/icons/close.svg');
+      }
     }
     .header-menu {
       display: block;
@@ -34,33 +37,20 @@
   display: inline-block;
   background-color: $btn_bg_color;
   border-radius: 100px;
-  color: #fff;
-  font-weight: 700;
-  font-size: 13px;
-  padding: 6px 9px;
+  color: $font_color2;
+  font-weight: 500;
+  font-size: 11px;
+  padding: 8px 11px;
   line-height: 1;
   text-align: center;
+  margin: 0 16px 0 0;
   &:hover {
-    color: #fff;
+    color: $font_color2;
     background-color: $btn_bg_color_hover;
   }
   @media (min-width: 992px) {
     font-size: 19px;
-    padding: 6px 11px 7px;
-  }
-  &.notice_login {
-    @media (min-width: 1200px) {
-      padding: 9px 0;
-      width: 48px;
-      height: 43px;
-      //background-image: url('../img/icons/heart.svg');
-      background-repeat: no-repeat;
-      background-color: transparent;
-      background-position: 50%;
-      background-size: 85%;
-      font-weight: 400;
-      font-size: 23px;
-    }
+    padding: 13px 11px;
   }
 }
 
@@ -99,21 +89,32 @@
 }
 
 .header__nav-toggle {
-  .menu {}
-  .notice {
-    &.notice_logo {
-      font-size: 10px;
-      padding: 4px 6px;
-      background-color: #fff;
-      color: $body_bg_color;
-      position: absolute;
-      top: -2px;
-      right: -4px;
+  .menu {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: auto;
+    background-image: url('../img/icons/menu.svg');
+    transition: 0.1s all;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.header__userinfo {
+  .header__userinfo-text {
+    text-transform: uppercase;
+    font-family: $font_family;
+    font-weight: 500;
+    color: $font_color2;
+    font-size: 23px;
+    letter-spacing: 1px;
+    .notice {
       @media (min-width: 992px) {
-        font-size: 13px;
-        padding: 6px 9px 7px;
-        top: 0;
-        right: -3px;
+        margin: 0 0 0 28px;
       }
     }
   }
@@ -128,21 +129,19 @@
 .header-menu__item {
   padding: 10px 0 20px;
   font-family: $font_family2;
-  font-weight: 700;
-  font-size: 16px;
-  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  color: $font_color2;
   text-decoration: none;
   text-transform: uppercase;
   line-height: 1;
+  letter-spacing: 1px;
   &:hover {
     text-decoration: none;
-    color: #fff;
+    color: $font_color2;
     .notice {
       background-color: $btn_bg_color_hover;
     }
-  }
-  .notice {
-    margin-top: 14px;
   }
 }
 .header-menu__item-text {
