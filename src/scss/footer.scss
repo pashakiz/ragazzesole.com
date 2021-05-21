@@ -41,31 +41,3 @@
     padding: 59px 0 38px;
   }
 }
-
-.body_bg {
-  .footer {
-    background-color: $body_bg_color;
-    position: relative;
-    @media (min-width: 1534px) {
-      background-color: transparent;
-    }
-    .footer__bottom {
-      @media (min-width: 1534px) {
-        background-image: url('../img/bg/bg-footer.svg');
-        background-repeat: no-repeat;
-        background-position: 50% 100%;
-        background-size: 100%;
-      }
-    }
-    &::before {
-      content: '';
-      @include wave(100%, 44px, '../img/bg/bg-footer-mob.svg', 50% 100%);
-      top: -43px;
-      z-index: 10;
-      @media (min-width: 1534px) {
-        content: none;
-        display: none;
-      }
-    }
-  }
-}

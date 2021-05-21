@@ -8,19 +8,15 @@ body {
   @media (min-width: 768px) {
     font-size: $font_size;
   }
-  &.body_bg {
-    background-color: $bg_light_1;
-    &.body_bg-mob {
-      background: $body_bg_color;
-      @media (min-width: 1200px) {
-        background-color: $bg_light_1;
-      }
-    }
-  }
-  &.body_bg-index {}
 }
 
 .container {
+  @media (min-width: 1500px) {
+    max-width: $container-xxl + $grid-gutter-width;
+  }
+  @media (min-width: 1920px) {
+    max-width: $container-xxxl + $grid-gutter-width;
+  }
   &.container_index {}
   &.container_xxl {
     @media (min-width: 1500px) {
@@ -30,17 +26,15 @@ body {
       max-width: $container-xxl + $grid-gutter-width;
     }
   }
-  &.container_xxxl {
-    @media (min-width: 1500px) {
-      max-width: $container-xxl + $grid-gutter-width;
-    }
-    @media (min-width: 1920px) {
-      max-width: $container-xxxl + $grid-gutter-width;
-    }
-  }
   &.container_settings {
     @media (min-width: 1200px) {
       padding-top: 91px;
+      max-width: 1022px + $grid-gutter-width;
+    }
+    @media (min-width: 1500px) {
+      max-width: 1022px + $grid-gutter-width;
+    }
+    @media (min-width: 1920px) {
       max-width: 1022px + $grid-gutter-width;
     }
   }
@@ -56,6 +50,12 @@ body {
   }
   &.container_narrow {
     @media (min-width: 1200px) {
+      max-width: 896px + $grid-gutter-width;
+    }
+    @media (min-width: 1500px) {
+      max-width: 896px + $grid-gutter-width;
+    }
+    @media (min-width: 1920px) {
       max-width: 896px + $grid-gutter-width;
     }
   }

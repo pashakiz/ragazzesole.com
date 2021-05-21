@@ -1,15 +1,30 @@
 .logo {
-  width: 65px;
-  height: 59px;
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: auto;
-  background-image: url('../img/icons/logo.svg');
-  @media (min-width: 992px) {
-    width: 100px;
-    height: 98px;
+  @media (min-width: 992px) {}
+
+  .logo__img {
+    width: 34px;
+    height: 34px;
+    margin: 0 15px 0 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100%;
+    background-image: url('../img/icons/logo-white.svg');
+    @media (min-width: 992px) {
+      width: 58px;
+      height: 58px;
+      margin: 0 35px 0 0;
+    }
+  }
+  .logo__txt {
+    text-transform: uppercase;
+    font-family: $font_family;
+    font-weight: 500;
+    color: $font_color2;
+    font-size: 25px;
   }
 }
 
