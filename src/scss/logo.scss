@@ -3,8 +3,6 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  @media (min-width: 992px) {}
-
   .logo__img {
     width: 34px;
     height: 34px;
@@ -32,12 +30,30 @@
   }
 }
 
-.logo_main {
-  width: 69px;
-  height: 67px;
+.logo_footer {
+  flex-direction: column;
+  margin: 0 0 40px 0;
   @media (min-width: 992px) {
-    width: 100px;
-    height: 98px;
+    margin: 0 0 57px 0;
+  }
+  .logo__img {
+    width: 31px;
+    height: 31px;
+    margin: 0 0 7px 0;
+    background-image: url('../img/icons/logo-footer.svg');
+    @media (min-width: 992px) {
+      width: 37px;
+      height: 37px;
+      margin: 0 0 18px 0;
+    }
+  }
+  .logo__txt {
+    color: $font_color3;
+    font-weight: 400;
+    font-size: 13px;
+    @media (min-width: 992px) {
+      font-size: 16px;
+    }
   }
 }
 
