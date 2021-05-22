@@ -76,22 +76,22 @@ h1 {
 }
 h2 {
   font-family: $font_family2;
-  font-weight: 700;
-  font-size: 35px;
-  line-height: 45px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
   color: $font_color;
   text-align: center;
-  margin-bottom: 66px;
+  margin-bottom: 60px;
   margin-top: 0;
+  text-transform: uppercase;
   @media (min-width: 992px) {
     font-size: 70px;
     line-height: 80px;
-    margin-bottom: 98px;
   }
   @media (min-width: 1200px) {
-    font-size: 110px;
-    line-height: 115px;
-    margin-bottom: 137px;
+    font-size: 90px;
+    line-height: 129px;
+    text-align: left;
   }
   &.h2_list {
     margin: 0;
@@ -105,17 +105,24 @@ h2 {
     }
   }
 }
+.texttitle_pos-up {
+  @media (min-width: 1200px) {
+    position: relative;
+    top: -35px;
+  }
+}
 h3 {
   font-family: $font_family2;
   font-weight: 700;
   color: $font_color;
   font-size: 16px;
   line-height: 24px;
-  margin-top: 35px;
+  margin-top: 37px;
   margin-bottom: 24px;
   text-transform: uppercase;
   text-align: center;
   @media (min-width: 1200px) {
+    text-align: left;
     font-size: 27px;
     margin-top: 102px;
     margin-bottom: 39px;
@@ -125,10 +132,10 @@ h3 {
   word-break: break-word;
 }
 p {
-  line-height: 32px;
+  line-height: 34px;
   margin-bottom: 1.5rem;
   @media (min-width: 768px) {
-    line-height: 45px;
+    line-height: 50px;
   }
   b {
     &.bmark {

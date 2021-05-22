@@ -60,8 +60,9 @@ body {
     }
   }
   &.container_text {
+    padding-top: 43px;
     @media (min-width: 1200px) {
-      padding-top: 29px;
+      padding-top: 153px;
     }
   }
   &.container_footer {}

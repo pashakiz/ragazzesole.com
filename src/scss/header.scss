@@ -55,9 +55,9 @@
 }
 
 .header_page {
-  margin-bottom: 28px;
+  margin-bottom: 28px + 28px;
   @media (min-width: 992px) {
-    margin-bottom: 58px;
+    margin-bottom: 58px + 106px;
   }
 }
 
