@@ -11,8 +11,10 @@ $(function() {
         //preloader
         setTimeout(function() {
             let preloader = document.body.querySelector('#page-preloader');
-            if ( !preloader.classList.contains('done') ) {
-                preloader.classList.add('done');
+            if (preloader != null) {
+                if ( !preloader.classList.contains('done') ) {
+                    preloader.classList.add('done');
+                }
             }
         }, 1000);
 

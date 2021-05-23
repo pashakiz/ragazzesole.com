@@ -11,16 +11,6 @@
     max-width: 470px;
   }
   @media (min-width: 992px) {}
-  &::after {
-    content: '';
-    @include wave(100%, 30px, '../img/bg/bg-ava-bottom2.svg', 50%);
-    bottom: -2px;
-    z-index: 2;
-    @media (min-width: 1200px) {
-      content: none;
-      display: none;
-    }
-  }
 }
 .user-profile-slider {
   width: 100%;
@@ -155,17 +145,6 @@
   @media (min-width: 1200px) {
     padding: 70px 0 0;
     background-color: transparent;
-  }
-  &::after {
-    content: '';
-    @include wave(calc(100% + 2px), 50px, '../img/bg/bg-footer-mob.svg', 50%);
-    bottom: -1px;
-    left: -1px;
-    right: -1px;
-    @media (min-width: 1200px) {
-      content: none;
-      display: none;
-    }
   }
 }
 .userprofile__row {

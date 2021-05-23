@@ -7,17 +7,6 @@
   @media (min-width: 1534px) {
     padding: 0 0 20px 0;
   }
-  &::after {
-    content: '';
-    @include wave(100%, 44px, '../img/bg/bg-userlist-bottom.svg', 50% 0);
-    bottom: -43px;
-    z-index: 10;
-    @media (min-width: 1534px) {
-      @include wave(100%, 200px, '../img/bg/bg-header.svg', 50% 0);
-      bottom: -199px;
-      z-index: 10;
-    }
-  }
 }
 
 .user-list-extra-wrap {
@@ -128,17 +117,6 @@
     position: relative;
     @media (min-width: $user_list_item_breakpoint) {
       padding: 96px 20px 13px;
-    }
-    &::after {
-      content: '';
-      @include wave(100%, 18px, '../img/bg/bg-userlistitem-bottom.svg', 50% 0);
-      left: 0;
-      bottom: -18px;
-      z-index: 15;
-      @media (min-width: 1534px) {
-        height: 44px;
-        bottom: -43px;
-      }
     }
   }
   .user-list-item__row {

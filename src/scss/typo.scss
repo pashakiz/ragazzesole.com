@@ -171,13 +171,14 @@ a {
   font-family: $link_txt_family;
   font-weight: 400;
   font-size: 16px;
-  color: $font_color3;
+  color: $font_color;
+  text-transform: uppercase;
   &:hover {
     color: $link_hover_color1;
     text-decoration: none;
   }
   @media (min-width: 1200px) {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 .link2 {

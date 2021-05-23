@@ -28,13 +28,6 @@ body {
   }
   &.container_settings {
     @media (min-width: 1200px) {
-      padding-top: 91px;
-      max-width: 1022px + $grid-gutter-width;
-    }
-    @media (min-width: 1500px) {
-      max-width: 1022px + $grid-gutter-width;
-    }
-    @media (min-width: 1920px) {
       max-width: 1022px + $grid-gutter-width;
     }
   }
@@ -50,12 +43,6 @@ body {
   }
   &.container_narrow {
     @media (min-width: 1200px) {
-      max-width: 896px + $grid-gutter-width;
-    }
-    @media (min-width: 1500px) {
-      max-width: 896px + $grid-gutter-width;
-    }
-    @media (min-width: 1920px) {
       max-width: 896px + $grid-gutter-width;
     }
   }
