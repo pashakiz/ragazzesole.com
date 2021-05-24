@@ -39,10 +39,7 @@ $(function() {
         });
 
         //slider (Profile gallery) for mobile
-        $('.owl-carousel.user-profile-slider').owlCarousel({
-            items: 1,
-            dots: false
-        });
+        owlInitProfile('.up-slider');
 
         //slider for SignUp/Login pages
         // $('.owl-carousel.user-list-slider-login').owlCarousel({
@@ -66,7 +63,7 @@ $(function() {
 
         //custom sliders
         owlInitFor('.login-slider', 0,1200);
-        owlInitFor('.user-profile-photo', 1, 1200);
+        //owlInitFor('.up-slider', 1, 1200);
 
     });
 
@@ -116,9 +113,20 @@ $(function() {
         $(el_class).removeClass('owl-carousel');
     }
 
+    function owlInitProfile(el_class) {
+        $(el_class).addClass('owl-carousel');
+        $('.owl-carousel' + el_class).owlCarousel({
+            items: 1,
+            dots: false,
+            nav: true,
+            navText: ['','']
+        });
+    }
+
     $(window).resize(function() {
         owlInitFor('.login-slider', 0,1200);
-        owlInitFor('.user-profile-photo', 1, 1200);
+        owlInitFor('.up-slider', 1, 1200);
+        owlInitProfile('.up-slider');
     });
 
 });

@@ -8,6 +8,21 @@ body {
   @media (min-width: 768px) {
     font-size: $font_size;
   }
+
+  &.body_bg {
+    &.body_bg-mob {
+      background-color: $bg_dark_1;
+      @media (min-width: 1200px) {
+        background-color: $body_bg_color;
+      }
+      .body__bgwrap {
+        background-color: $body_bg_color;
+        @media (min-width: 1200px) {
+          background-color: transparent;
+        }
+      }
+    }
+  }
 }
 
 .container {
@@ -35,11 +50,7 @@ body {
     @media (min-width: 1200px) {
       padding-top: 120px;
     }
-    .container__inner {
-      @media (min-width: 1200px) {
-        padding: 0 55px;
-      }
-    }
+    .container__inner {}
   }
   &.container_narrow {
     @media (min-width: 1200px) {

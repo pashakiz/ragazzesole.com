@@ -33,6 +33,28 @@
   }
 }
 
+.body_bg {
+  &.body_bg-mob {
+    .header {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -28px - 28px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 28px + 28px;
+        background-color: $body_bg_color;
+        @media (min-width: 992px) {
+          height: 58px + 106px;
+          bottom: -58px - 106px;
+        }
+      }
+    }
+  }
+}
+
 .notice {
   display: inline-block;
   background-color: $btn_bg_color;

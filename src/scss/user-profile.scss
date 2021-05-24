@@ -1,59 +1,3 @@
-.user-profile-slider-wrap {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-  @media (min-width: 400px) {
-    width: 320px;
-    max-width: 320px;
-  }
-  @media (min-width: 768px) {
-    width: 470px;
-    max-width: 470px;
-  }
-  @media (min-width: 992px) {}
-}
-.user-profile-slider {
-  width: 100%;
-  height: 472px;
-  position: relative;
-  border-radius: 0;
-  overflow: hidden;
-  @media (min-width: 400px) {
-    height: 472px;
-    max-height: 472px;
-  }
-  @media (min-width: 768px) {
-    height: 693px;
-    max-height: 693px;
-  }
-  .slide {
-    width: 100%;
-    height: 506px;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-    @media (min-width: 400px) {
-      height: 506px;
-      max-height: 506px;
-    }
-    @media (min-width: 768px) {
-      height: 854px;
-      max-height: 854px;
-    }
-  }
-  &.owl-carousel {
-    .owl-dots {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    button.owl-dot {
-      +button.owl-dot {}
-      &.active {}
-    }
-  }
-}
 .owl-carousel {
   .owl-dots {
     position: absolute;
@@ -92,87 +36,130 @@
 }
 
 .userprofile__photo {
+  margin: 0 auto 32px;
   @media (min-width: 1200px) {
-    width: 483px;
-    min-width: 483px;
-    max-width: 483px;
-    position: relative;
-    margin: 0 63px 0 0;
+    margin: 0 99px 0 0;
   }
 }
 
-.userprofile__img {
-  width: 100%;
-  @media (min-width: 1200px) {
-    width: 483px;
-    min-width: 483px;
-    max-width: 483px;
-    height: 483px;
-    border-radius: 100%;
+.up-slider {
+  width: 290px;
+  height: 462px;
+  position: relative;
+  overflow: hidden;
+  @media (min-width: 576px) {
+    width: 374px;
+    height: 556px;
+  }
+
+  .up-slider__img {
+    width: 100%;
+    height: 462px;
+    border-radius: 500px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    @media (min-width: 576px) {
+      width: 374px;
+      height: 556px;
+    }
+  }
+
+  @mixin owlnavs {
+    width: 12px;
+    height: 30px;
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100%;
-    position: relative;
+    position: absolute;
+    &.disabled {
+      background-image: none;
+    }
+    @media (min-width: 576px) {
+      width: 21px;
+      height: 54px;
+    }
   }
+
+  &.owl-carousel {
+    .owl-nav {
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      @media (min-width: 576px) {
+        height: 54px;
+        margin-top: -27px;
+      }
+      .owl-prev {
+        @include owlnavs;
+        left: 22px;
+        background-image: url('../img/icons/arrow-left.svg');
+        @media (min-width: 576px) {
+          left: 32px;
+        }
+      }
+      .owl-next {
+        @include owlnavs;
+        right: 22px;
+        background-image: url('../img/icons/arrow-right.svg');
+        @media (min-width: 576px) {
+          right: 32px;
+        }
+      }
+    }
+  }
+
 }
 .userprofile__btn {
-  position: absolute;
-  bottom: -25px;
+  top: -74px;
 }
 .userprofile__info {
+  margin: 32px auto 55px;
   @media (min-width: 400px) {
     width: 320px;
     max-width: 320px;
-    margin: 0 auto;
   }
   @media (min-width: 768px) {
     width: 470px;
     max-width: 470px;
   }
   @media (min-width: 1200px) {
-    margin: 0;
+    margin: 34px 0 0 0;
     color: $font_color;
   }
 }
-.userprofile__infobg {
-  margin: 0 -15px;
-  background-color: $bg_light_1;
-  padding: 45px 15px 63px;
-  position: relative;
-  @media (min-width: 400px) {
-    margin: 0;
-  }
-  @media (min-width: 1200px) {
-    padding: 70px 0 0;
-    background-color: transparent;
-  }
-}
+.userprofile__infobg {}
 .userprofile__row {
   text-align: center;
-  color: $body_bg_color;
-  margin-bottom: 29px;
+  color: $font_color;
+  margin-bottom: 30px;
   @media (min-width: 1200px) {
-    margin-bottom: 42px;
+    text-align: left;
+    margin-bottom: 50px;
   }
 }
 .userprofile__name {
   font-family: $font_family2;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1;
-  margin: 0 0 7px 0;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
   @media (min-width: 1200px) {
-    font-size: 36px;
-    margin: 0 28px 0 0;
+    font-size: 42px;
+    margin: 0 0 17px 0;
   }
 }
 .userprofile__loc {
   font-family: $font_family;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1;
   @media (min-width: 1200px) {
-    font-size: 22px;
+    font-size: 23px;
   }
 }
 .userprofile__title {
@@ -194,25 +181,16 @@
   }
 }
 
-.user-profile-btn-wrap {
-  margin: 0 15px 0;
-  width: calc(100% - 30px);
-  position: absolute;
-  bottom: -12px;
-  z-index: 5;
-}
-.user-profile-btn {}
-
 .compatibility {
   &.compatibility_mb {
-    padding-bottom: 0;
+    padding-bottom: 29px;
     @media (min-width: 1200px) {
-      padding-bottom: 51px;
+      padding-bottom: 66px;
     }
   }
   .compatibility__chart {
     +.compatibility__chart {
-      margin-left: 30px;
+      margin-left: 25px;
       @media (min-width: 576px) {
         margin-left: 35px;
       }
@@ -222,35 +200,50 @@
     }
   }
   .compatibility__progress {
-    width: 70px;
-    height: 18px;
-    @media (min-width: $user_list_item_breakpoint) {
-      width: 110px;
-      height: 28px;
-    }
-    &.progress {
+    display: flex;
+    .dotmark {
+      width: 19px;
+      height: 10px;
       border-radius: 100px;
-      border: 2px solid $body_bg_color;
-      background-color: $body_bg_color;
-      @media (min-width: $user_list_item_breakpoint) {
-        border: 3px solid $body_bg_color;
+      background-color: $bg_light_2;
+      + .dotmark {
+        margin-left: 6px;
       }
-      .progress-bar {
-        border-radius: 100px;
+      @media (min-width: $user_list_item_breakpoint) {
+        width: 29px;
+        height: 16px;
+        + .dotmark {
+          margin-left: 8px;
+        }
+      }
+    }
+    &.progress1 {
+      .dotmark:nth-child(1) {
+        background-color: $btn_bg_color;
+      }
+    }
+    &.progress2 {
+      .dotmark:nth-child(1),
+      .dotmark:nth-child(2) {
+        background-color: $btn_bg_color;
+      }
+    }
+    &.progress3 {
+      .dotmark {
         background-color: $btn_bg_color;
       }
     }
   }
   .compatibility__title {
     font-family: $font_family;
-    color: $body_bg_color;
-    font-weight: 400;
-    font-size: 14px;
-    margin-top: 15px;
+    color: $font_color;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 10px;
     text-transform: uppercase;
     @media (min-width: $user_list_item_breakpoint) {
-      font-size: 22px;
-      margin-top: 29px;
+      font-size: 21px;
+      margin-top: 15px;
     }
   }
 
@@ -264,20 +257,18 @@
       }
     }
     .compatibility__progress {
-      width: 33px;
-      height: 8px;
-      @media (min-width: $user_list_item_breakpoint) {
-        width: 70px;
-        height: 18px;
-      }
-      &.progress {
-        border: 1px solid $body_bg_color;
-        @media (min-width: $user_list_item_breakpoint) {
-          border: 2px solid $body_bg_color;
+      .dotmark {
+        width: 19px;
+        height: 10px;
+        + .dotmark {
+          margin-left: 6px;
         }
-        .progress-bar {
-          border-radius: 100px;
-          background-color: $btn_bg_color;
+        @media (min-width: $user_list_item_breakpoint) {
+          width: 29px;
+          height: 16px;
+          + .dotmark {
+            margin-left: 8px;
+          }
         }
       }
     }
@@ -294,36 +285,44 @@
 
 .user-profile-title {
   font-family: $font_family2;
-  color: $font_color;
-  font-weight: 700;
-  font-size: 30px;
+  color: $body_bg_color;
+  font-weight: 500;
+  font-size: 22px;
   margin-bottom: 34px;
+  text-transform: uppercase;
   @media (min-width: 1200px) {
-    color: $body_bg_color;
-    font-size: 30px;
+    color: $font_color;
+    font-size: 42px;
     margin-bottom: 20px;
   }
 }
 
 .user-profile-about {
-  font-size: 15px;
+  padding: 0 15px;
+  background-color: $bg_dark_1;
+  text-align: center;
+  font-size: 16px;
+  position: relative;
   p {
-    color: $font_color;
-    line-height: 32px;
+    color: $font_color3;
+    line-height: 36px;
   }
   @media (min-width: 1200px) {
-    font-size: 18px;
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
+    font-size: 19px;
     p {
-      color: $body_bg_color;
-      line-height: 35px;
+      color: $font_color;
+      line-height: 43px;
     }
   }
   .user-profile-about__title {
-    line-height: 41px;
-    margin: 43px 0 34px;
+    line-height: 28px;
+    margin: 56px 0 41px;
     @media (min-width: 1200px) {
-      margin: 0 0 20px;
-      line-height: 41px;
+      margin: 0 0 27px;
+      line-height: 53px;
     }
   }
 }
