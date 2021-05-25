@@ -7,6 +7,7 @@ $btn_bg_color_active:       #F68282;
 $bg_dark_1:                 #416A67;
 $bg_light_1:                #F3DDDD;
 $bg_light_2:                #EED3D2;
+$bg_light_3:                #E3DCDA;
 $font_color:                #416A67;
 $font_color2:               #fff;
 $font_color3:               #F2F2F2;
@@ -173,7 +174,7 @@ $switch_label_lineheight_mob: 28px;
 //User List page wider
 $user_list_wider:           160px;
 $user_list_item_breakpoint: 992px;
-$user_list_title_color:     $font_color2;
+$user_list_title_color:     $font_color3;
 
 /**/
 @mixin circle($diameter, $background-color) {

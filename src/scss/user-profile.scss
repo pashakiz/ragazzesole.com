@@ -230,7 +230,7 @@
     }
     &.progress3 {
       .dotmark {
-        background-color: $btn_bg_color;
+        background-color: $btn_bg_color !important;
       }
     }
   }
@@ -248,26 +248,32 @@
   }
 
   &.compatibility_list {
+    margin: 0 0 10px 0;
+    @media (min-width: $user_list_item_breakpoint) {
+      margin: 0 0 26px 0;
+    }
     .compatibility__title {
       font-size: 6px;
-      margin-top: 7px;
+      margin-top: 6px;
+      text-align: center;
       @media (min-width: $user_list_item_breakpoint) {
-        font-size: 15px;
-        margin-top: 14px;
+        font-size: 13px;
+        margin-top: 9px;
       }
     }
     .compatibility__progress {
       .dotmark {
-        width: 19px;
-        height: 10px;
+        background-color: #E7CCCA;
+        width: 9px;
+        height: 6px;
         + .dotmark {
-          margin-left: 6px;
+          margin-left: 2px;
         }
         @media (min-width: $user_list_item_breakpoint) {
-          width: 29px;
-          height: 16px;
+          width: 17px;
+          height: 10px;
           + .dotmark {
-            margin-left: 8px;
+            margin-left: 5px;
           }
         }
       }

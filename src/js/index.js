@@ -62,48 +62,49 @@ $(function() {
         // });
 
         //custom sliders
-        owlInitFor('.login-slider', 0,1200);
+        owlInitFor('.login-slider', 0,1200, true);
+        owlInitFor('.user-list', 1, 1200, false);
         //owlInitFor('.up-slider', 1, 1200);
 
     });
 
     //init owl carousel for custom screen width
-    function owlInitFor(el_class, compare, breakpoint) {
+    function owlInitFor(el_class, compare, breakpoint, optionLoop = false) {
         if (compare) {
             if (window.innerWidth > breakpoint) {
-                owlInit(el_class);
+                owlInit(el_class, optionLoop);
             } else {
                 owlDestroy(el_class);
             }
         } else {
             if (window.innerWidth < breakpoint) {
-                owlInit(el_class);
+                owlInit(el_class, optionLoop);
             } else {
                 owlDestroy(el_class);
             }
         }
     }
 
-    function owlInit(el_class) {
+    function owlInit(el_class, optionLoop) {
         $(el_class).addClass('owl-carousel');
         $('.owl-carousel' + el_class).owlCarousel({
-            loop: true,
+            loop: optionLoop,
             dots: false,
             items: 1,
-            margin: 11,
+            margin: 22,
             autoWidth: true,
             responsive:{
                 768:{
-                    margin: 11
+                    margin: 22
                 },
                 992:{
-                    margin: 11
+                    margin: 22
                 },
                 1200:{
-                    margin: 50
+                    margin: 48
                 },
                 1500:{
-                    margin: 96
+                    margin: 48
                 },
             }
         });
@@ -125,7 +126,8 @@ $(function() {
 
     $(window).resize(function() {
         owlInitFor('.login-slider', 0,1200);
-        owlInitFor('.up-slider', 1, 1200);
+        owlInitFor('.user-list', 1, 1200, false);
+        //owlInitFor('.up-slider', 1, 1200);
         owlInitProfile('.up-slider');
     });
 

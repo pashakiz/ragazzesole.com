@@ -94,14 +94,10 @@ h2 {
     text-align: left;
   }
   &.h2_list {
-    margin: 0;
-    @media (min-width: 992px) {
-      font-size: 70px;
-      line-height: 80px;
+    @media (min-width: 992px) {}
+    @media (min-width: 1200px) {
       margin: 0;
-    }
-    @media (min-width: 1534px) {
-      display: none;
+      line-height: 144px;
     }
   }
 }

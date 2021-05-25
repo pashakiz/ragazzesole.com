@@ -10,6 +10,7 @@ body {
   }
 
   &.body_bg {
+    background-color: $bg_dark_1;
     &.body_bg-mob {
       background-color: $bg_dark_1;
       @media (min-width: 1200px) {
