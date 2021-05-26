@@ -30,12 +30,16 @@
         document.querySelector('.display.display_01').style.display = 'block';
     }
     function hideAreaIndex() {
+        preloader.classList.remove('done');
         document.querySelector('.display.display_01').style.display = 'none';
     }
 
     function showAreaProgressBars() {
         document.querySelector('.display.display_02').style.display = 'block';
         //document.querySelector('.display.display_02').scrollIntoView({block: 'center', behavior: 'smooth'});
+        setTimeout(function() {
+            preloader.classList.add('done');
+        }, 1000);
         loading();
     }
     function hideAreaProgressBars() {
