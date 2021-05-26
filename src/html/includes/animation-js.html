@@ -13,7 +13,7 @@
 
     function initEvents() {
         let btnIndex = document.querySelectorAll('.btn-index');
-        btnIndex.forEach(function(btn){
+        btnIndex.forEach(function(btn){ // for mobile and desktop buttons
             btn.addEventListener('click', handlerClickBtnIndex);
         });
     }
@@ -26,7 +26,7 @@
 
     function showAreaIndex() {
         document.body.classList.add('body_bg');
-        document.body.classList.add('body_bg-index');
+        document.body.classList.add('body_bg-mob');
         document.querySelector('.display.display_01').style.display = 'block';
     }
     function hideAreaIndex() {
@@ -39,8 +39,6 @@
         loading();
     }
     function hideAreaProgressBars() {
-        document.body.classList.remove('body_bg');
-        document.body.classList.remove('body_bg-index');
         document.querySelector('.display.display_02').style.display = 'none';
     }
 
@@ -51,7 +49,7 @@
     }
 
     function showAreaLogin() {
-        document.body.classList.add('body_bg-login');
+        document.body.classList.add('no-push-bottom');
         let area = document.querySelector('.display.display_03');
         area.style.display = 'block';
         setTimeout(function() {
@@ -63,7 +61,7 @@
     }
 
     function loading() {
-        let progressBar1 = document.querySelector('.progress.progress_loading-1 .progress-bar');
+        let progressBar1 = document.querySelector('.progress.progress_index .progress-bar');
         progressValue(progressBar1, progressSpeed1);
     }
 
