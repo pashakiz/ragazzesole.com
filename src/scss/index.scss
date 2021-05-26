@@ -124,6 +124,55 @@
     }
   }
 }
+.progress {
+  &.progress_index {
+    background-color: $bg_light_4;
+    height: 54px;
+    border-radius: 100px;
+    position: relative;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+      width: 382px;
+      max-width: 382px;
+    }
+    @media (min-width: 992px) {
+      width: 100%;
+      max-width: 382px;
+    }
+    @media (min-width: 1200px) {
+      height: 74px;
+      width: 600px;
+      max-width: 600px;
+      margin: 0;
+      left: -250px;
+    }
+    @media (min-width: 1500px) {
+      width: 730px;
+      max-width: 730px;
+    }
+    @media (min-width: 1920px) {
+      width: 730px;
+      max-width: 730px;
+    }
+  }
+  .progress-bar {
+    font-family: $font_family;
+    background-color: $btn_bg_color;
+    border: 6px solid $bg_light_4;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: $font_color2;
+    text-transform: uppercase;
+    padding: 0 13px;
+    @media (min-width: 1200px) {
+      font-size: 24px;
+      line-height: 30px;
+      padding: 0 20px;
+    }
+  }
+}
 
 .index-btn-area {
   margin: 0 auto 32px;
