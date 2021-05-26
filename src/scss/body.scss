@@ -33,7 +33,6 @@ body {
   @media (min-width: 1920px) {
     max-width: $container-xxxl + $grid-gutter-width;
   }
-  &.container_index {}
   &.container_xxl {
     @media (min-width: 1500px) {
       max-width: $container-xxl + $grid-gutter-width;
@@ -42,6 +41,7 @@ body {
       max-width: $container-xxl + $grid-gutter-width;
     }
   }
+  &.container_index {}
   &.container_settings {
     @media (min-width: 1200px) {
       max-width: 1022px + $grid-gutter-width;

@@ -41,54 +41,33 @@ $(function() {
         //slider (Profile gallery) for mobile
         owlInitProfile('.up-slider');
 
-        //slider for SignUp/Login pages
-        // $('.owl-carousel.user-list-slider-login').owlCarousel({
-        //     loop: true,
-        //     dots: false,
-        //     items: 2,
-        //     margin: 30,
-        //     autoWidth: true,
-        //     responsive:{
-        //         768:{
-        //             margin: 30
-        //         },
-        //         992:{
-        //             margin: 60
-        //         },
-        //         1200:{
-        //             margin: 0
-        //         }
-        //     }
-        // });
-
         //custom sliders
-        owlInitFor('.login-slider', 0,1200, true);
-        owlInitFor('.user-list', 1, 1200, false);
-        //owlInitFor('.up-slider', 1, 1200);
-
-    });
-
-    //init owl carousel for custom screen width
-    function owlInitFor(el_class, compare, breakpoint, optionLoop = false) {
-        if (compare) {
-            if (window.innerWidth > breakpoint) {
-                owlInit(el_class, optionLoop);
-            } else {
-                owlDestroy(el_class);
+        owlInit('.login-slider', {
+            loop: true,
+            dots: false,
+            items: 1,
+            margin: 17,
+            autoWidth: true,
+            responsive:{
+                768:{
+                    margin: 17
+                },
+                992:{
+                    margin: 17
+                },
+                1200:{
+                    margin: 40
+                },
+                1500:{
+                    margin: 30
+                },
+                1920:{
+                    margin: 48
+                },
             }
-        } else {
-            if (window.innerWidth < breakpoint) {
-                owlInit(el_class, optionLoop);
-            } else {
-                owlDestroy(el_class);
-            }
-        }
-    }
-
-    function owlInit(el_class, optionLoop) {
-        $(el_class).addClass('owl-carousel');
-        $('.owl-carousel' + el_class).owlCarousel({
-            loop: optionLoop,
+        });
+        owlInitFor('.user-list', 1, 1200, {
+            loop: false,
             dots: false,
             items: 1,
             margin: 22,
@@ -108,6 +87,29 @@ $(function() {
                 },
             }
         });
+
+    });
+
+    //init owl carousel for custom screen width
+    function owlInitFor(el_class, compare, breakpoint, options) {
+        if (compare) {
+            if (window.innerWidth > breakpoint) {
+                owlInit(el_class, options);
+            } else {
+                owlDestroy(el_class);
+            }
+        } else {
+            if (window.innerWidth < breakpoint) {
+                owlInit(el_class, options);
+            } else {
+                owlDestroy(el_class);
+            }
+        }
+    }
+
+    function owlInit(el_class, options) {
+        $(el_class).addClass('owl-carousel');
+        $('.owl-carousel' + el_class).owlCarousel(options);
     }
     function owlDestroy(el_class) {
         $('.owl-carousel' + el_class).owlCarousel('destroy');
@@ -125,10 +127,52 @@ $(function() {
     }
 
     $(window).resize(function() {
-        owlInitFor('.login-slider', 0,1200);
-        owlInitFor('.user-list', 1, 1200, false);
-        //owlInitFor('.up-slider', 1, 1200);
         owlInitProfile('.up-slider');
+        owlInit('.login-slider', {
+            loop: true,
+            dots: false,
+            items: 1,
+            margin: 17,
+            autoWidth: true,
+            responsive:{
+                768:{
+                    margin: 17
+                },
+                992:{
+                    margin: 17
+                },
+                1200:{
+                    margin: 40
+                },
+                1500:{
+                    margin: 30
+                },
+                1920:{
+                    margin: 48
+                },
+            }
+        });
+        owlInitFor('.user-list', 1, 1200, {
+            loop: false,
+            dots: false,
+            items: 1,
+            margin: 22,
+            autoWidth: true,
+            responsive:{
+                768:{
+                    margin: 22
+                },
+                992:{
+                    margin: 22
+                },
+                1200:{
+                    margin: 48
+                },
+                1500:{
+                    margin: 48
+                },
+            }
+        });
     });
 
 });

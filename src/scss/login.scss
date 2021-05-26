@@ -36,13 +36,10 @@
     max-width: 100%;
     margin: 0;
   }
-  .login-form__inner {
-    @media (min-width: 1200px) {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
+  @media (min-width: 1920px) {
+    padding: 0 0 0 48px;
   }
+  .login-form__inner {}
 }
 
 .login-slider-wrap {
@@ -51,7 +48,32 @@
     margin: 0;
   }
 }
-.login-slider {}
+.login-slider {
+  padding: 27px 0 0;
+  @media (min-width: 992px) {
+    padding: 27px 0 0;
+  }
+  @media (min-width: 1200px) {
+    width: 500px;
+    padding: 319px 0 0;
+  }
+  @media (min-width: 1500px) {
+    width: 730px;
+    padding: 319px 0 0;
+  }
+  @media (min-width: 1920px) {
+    padding: 319px 0 0;
+    width: 871px;
+  }
+  .user-list-item_extra {
+    @media (min-width: 432px) {
+      margin: 23px 0 0 !important;
+    }
+    @media (min-width: $user_list_item_breakpoint) {
+      margin: 46px 0 0 !important;
+    }
+  }
+}
 
 .login-extra {
   display: flex;

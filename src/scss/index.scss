@@ -1,15 +1,4 @@
 .display {
-  @media (min-width: 1200px) {
-    margin: 0;
-  }
-  .firstscreen {
-    padding: 10px 0 0 0;
-    background-color: $body_bg_color;
-    margin-top: -1px;
-  }
-  .secondscreen {
-    color: $font_color2;
-  }
   p {
     line-height: 34px;
     @media (min-width: 768px) {
@@ -34,13 +23,72 @@
   }
 }
 .display_03 {
-  margin: 10px 0 0 0;
+  .secondscreen {
+    margin-bottom: 675px;
+    @media (min-width: 1200px) {
+      margin: 0;
+    }
+  }
 }
 
 .btn_display-01 {
   @media (min-width: 1200px) {
     margin-left: auto;
   }
+}
+
+.firstscreen {
+  height: 580px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  @media (min-width: 992px) {
+    height: 683px;
+  }
+  @media (min-width: 1200px) {
+    height: 683px;
+  }
+  @media (min-width: 1500px) {
+    height: 853px;
+  }
+  @media (min-width: 1920px) {
+    height: 1092px;
+  }
+  &.firstscreen_bg-00 {
+    background-image: url('../img/bg/bg-firstscreen-04m.jpg');
+    @media (min-width: 1200px) {
+      height: 100vh;
+      background-image: url('../img/bg/bg-firstscreen.svg');
+    }
+  }
+  &.firstscreen_bg-01 {
+    background-image: url('../img/bg/bg-firstscreen-01m.jpg');
+    @media (min-width: 1200px) {
+      background-image: url('../img/bg/bg-firstscreen-01d.jpg');
+    }
+  }
+  &.firstscreen_bg-02 {
+    background-image: url('../img/bg/bg-firstscreen-02m.jpg');
+    @media (min-width: 1200px) {
+      background-image: url('../img/bg/bg-firstscreen-02d.jpg');
+    }
+  }
+  &.firstscreen_bg-03 {
+    background-image: url('../img/bg/bg-firstscreen-03m.jpg');
+    @media (min-width: 1200px) {
+      background-image: url('../img/bg/bg-firstscreen-03d.jpg');
+    }
+  }
+  &.firstscreen_bg-04 {
+    background-image: url('../img/bg/bg-firstscreen-04m.jpg');
+    @media (min-width: 1200px) {
+      background-image: url('../img/bg/bg-firstscreen-04d.jpg');
+    }
+  }
+}
+
+.secondscreen {
+  color: $font_color2;
 }
 
 .index-btn-area {
@@ -99,27 +147,5 @@
   @media (min-width: 1200px) {
     position: relative;
     bottom: -1px;
-  }
-}
-
-.notice-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.notice-row__icon {
-  display: block;
-}
-.notice-row__txt {
-  @media (min-width: 1200px) {
-    font-family: $font_family;
-    color: $font_color3;
-    font-weight: 300;
-    font-size: 33px;
-    line-height: 1;
-    margin-left: 20px;
-    position: relative;
-    top: -4px;
   }
 }
