@@ -25,6 +25,9 @@
 .display_03 {
   .secondscreen {
     margin-bottom: 675px;
+    @media (min-width: 992px) {
+      margin-bottom: 999px;
+    }
     @media (min-width: 1200px) {
       margin: 0;
     }

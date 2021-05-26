@@ -35,6 +35,8 @@
   @media (min-width: 1200px) {
     max-width: 100%;
     margin: 0;
+    position: relative;
+    z-index: 1;
   }
   @media (min-width: 1920px) {
     padding: 0 0 0 48px;
@@ -51,19 +53,19 @@
 .login-slider {
   padding: 27px 0 0;
   @media (min-width: 992px) {
-    padding: 27px 0 0;
+    padding: 0;
   }
   @media (min-width: 1200px) {
-    width: 500px;
-    padding: 319px 0 0;
+    width: 540px;
+    padding: 24px 0 0;
   }
   @media (min-width: 1500px) {
     width: 730px;
-    padding: 319px 0 0;
+    padding: 145px 0 0;
   }
   @media (min-width: 1920px) {
-    padding: 319px 0 0;
     width: 871px;
+    padding: 319px 0 0;
   }
   .user-list-item_extra {
     @media (min-width: 432px) {
