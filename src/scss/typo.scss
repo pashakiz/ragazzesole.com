@@ -21,9 +21,28 @@ h1 {
     }
   }
   &.h1_index {
-    margin-bottom: 34px;
+    color: $font_color3;
+    font-weight: 500;
+    font-size: 41px;
+    line-height: 70px;
+    margin-bottom: 30px;
+    text-align: center;
     @media (min-width: 1200px) {
+      text-align: left;
+      color: $font_color;
+      font-size: 56px;
+      line-height: 76px;
       margin-bottom: 50px;
+    }
+    @media (min-width: 1500px) {
+      font-size: 75px;
+      line-height: 110px;
+    }
+    @media (min-width: 1920px) {
+      padding: 0;
+      font-size: 75px;
+      line-height: 110px;
+      margin-bottom: 70px;
     }
   }
   &.h1_index-main {
@@ -166,6 +185,20 @@ p {
     &.bmark {
       font-weight: 700;
       font-family: $font_family;
+    }
+  }
+}
+.secondscreen_index {
+  p {
+    color: $font_color3;
+    line-height: 36px !important;
+    @media (min-width: 768px) {
+      line-height: 36px !important;
+    }
+    @media (min-width: 1200px) {
+      color: $font_color;
+      line-height: 50px !important;
+      font-size: $font_size !important;
     }
   }
 }

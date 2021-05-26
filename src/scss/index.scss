@@ -57,6 +57,11 @@
   @media (min-width: 1920px) {
     height: 1092px;
   }
+  &.firstscreen_index {
+    @media (min-width: 1200px) {
+      background-position: 50% 100%;
+    }
+  }
   &.firstscreen_bg-00 {
     background-image: url('../img/bg/bg-firstscreen-04m.jpg');
     @media (min-width: 1200px) {
@@ -90,8 +95,34 @@
   }
 }
 
+.firstscreen__content {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  @media (min-width: 1200px) {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 0 0 50px;
+  }
+  @media (min-width: 1920px) {
+    padding: 0 0 0 48px;
+  }
+}
+
 .secondscreen {
   color: $font_color2;
+  &.secondscreen_index {
+    margin: 72px 0 0;
+    @media (min-width: 1200px) {
+      margin: 100px 0 0;
+    }
+    @media (min-width: 1500px) {
+      margin: 135px 0 0;
+    }
+    @media (min-width: 1920px) {
+      margin: 188px 0 0;
+    }
+  }
 }
 
 .index-btn-area {

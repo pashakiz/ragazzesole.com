@@ -697,8 +697,10 @@ textarea.form-control {
     padding: 33px 15px 33px;
   }
   &.btn_1 { //index
+    display: block;
+    margin: 0 auto;
     @media (min-width: 768px) {
-      width: 100%;
+      width: 382px;
       max-width: 382px;
     }
     @media (min-width: 992px) {
@@ -706,8 +708,18 @@ textarea.form-control {
       max-width: 382px;
     }
     @media (min-width: 1200px) {
-      width: 430px;
-      max-width: 430px;
+      width: 600px !important;
+      max-width: 600px;
+      margin: 0;
+      left: -250px;
+    }
+    @media (min-width: 1500px) {
+      width: 730px !important;
+      max-width: 730px;
+    }
+    @media (min-width: 1920px) {
+      width: 730px !important;
+      max-width: 730px;
     }
   }
   &.btn-login {

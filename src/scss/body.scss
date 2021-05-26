@@ -42,6 +42,12 @@ body {
     }
   }
   &.container_index {}
+  &.container_index-text {
+    max-width: 812px + $grid-gutter-width;
+    @media (min-width: 1200px) {
+      max-width: 812px + $grid-gutter-width;
+    }
+  }
   &.container_settings {
     @media (min-width: 1200px) {
       max-width: 1022px + $grid-gutter-width;
